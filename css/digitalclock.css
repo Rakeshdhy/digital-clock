@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(35deg, #08001f, #30197d);
+  color: #fff;
+  position: relative;
+}
+.container {
+  width: 650px;
+  height: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 0, 255, 0.12);
+  backdrop-filter: blur(70px);
+}
+
+.clock span {
+  font-size: 80px;
+  width: 90px;
+  text-align: center;
+  position: relative;
+}
+.clock span::after {
+  content: "";
+  font-size: 16px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#hrs::after {
+  content: "HOURS";
+}
+
+#min::after {
+  content: "MINUTES";
+}
+
+#sec::after {
+  content: "SECONDS";
+}
+
+.container::before {
+  content: "";
+  width: 180px;
+  height: 180px;
+  background-color: #f41b75;
+  border-radius: 5px;
+  position: absolute;
+  left: -50px;
+  top: -50px;
+  z-index: -1;
+}
+
+.container::after {
+  content: "";
+  width: 180px;
+  height: 180px;
+  background-color: #419aff;
+  border-radius: 50%;
+  position: absolute;
+  right: -50px;
+  bottom: -50px;
+  z-index: -1;
+}
